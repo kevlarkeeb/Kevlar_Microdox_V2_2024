@@ -163,11 +163,11 @@
 //╭────────────┬─────────────┬─────────────┬─────────────┬──────────╮       ╭────────────┬─────────────┬─────────────┬─────────────┬──────────╮
     &kp APOS     &kp COMMA     &kp DOT       &kp P         &kp Y              &kp F        &kp G         &kp C         &kp R         &kp L
 //├────────────┼─────────────┼─────────────┼─────────────┼──────────┤       ├────────────┼─────────────┼─────────────┼─────────────┼──────────┤
-    &hm LGUI A   &hml LALT O   &hml LCTRL E  &hml LSHFT U  &kp I              &kp D        &hmr RSHFT H  &hmr RCTRL T  &hmr RALT N   &hmr RGUI S
+    &hm LGUI A  &hm LALT O   &hml LCTRL E  &hml LSHFT U  &kp I              &kp D        &hmr RSHFT H  &hmr RCTRL T  &hmr RALT N   &hmr RGUI S
 //├────────────┼─────────────┼─────────────┼─────────────┼──────────┤       ├────────────┼─────────────┼─────────────┼─────────────┼──────────┤
-    &kp SEMI     &hm LGUI Q    &hml LALT J   &hml LCTRL K  &hml LSHFT X       &hmr RSHFT B &hmr RCTRL M  &hmr RALT W   &hmr RGUI V   &kp Z
+   &hm LGUI SEMI    &hm LALT Q    &hml LCTRL J   &hml LSHFT K  &lt NAV X       &hmr RSHFT B &hmr RCTRL M  &hmr RALT W   &hmr RGUI V   &kp Z
 //╰────────────┴─────────────┼─────────────┼─────────────┼──────────╯       ╰────────────┼─────────────┼─────────────┼─────────────┼──────────╯
-                 &lt OTH TAB  &lt NAV ENTER       &lt NUM SPACE                       &kp SPACE           &none        &lt OTH TAB 
+                 &lt OTH TAB  &lt FLP ENTER       &lt NUM SPACE                       &kp SPACE           &none        &lt OTH TAB 
  //            ╰─────────────┴─────────────┴────────────────────────╯       ╰──────────────────────────┴─────────────┴─────────────╯
             >;
         };
@@ -201,7 +201,7 @@
 //├────────────┼─────────────┼─────────────┼─────────────┼──────────┤       ├────────────┼─────────────┼─────────────┼─────────────┼──────────┤
     &kp LA(F2)     &kp LC(P)   &kp ENTER     &SIGN_SCRIPT  &kp LA(S)          &none       &none         &none          &LOGIN        &none 
 //├────────────┼─────────────┼─────────────┼─────────────┼──────────┤       ├────────────┼─────────────┼─────────────┼─────────────┼──────────┤
-    &CLOSE_FILE   &kp LC(T)   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2     &none       &none 
+    &CLOSE_FILE   &kp LC(T)   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2     &none       BT_CLR 
 //╰────────────┴─────────────┼─────────────┼─────────────┼──────────╯       ╰────────────┼─────────────┼─────────────┼─────────────┼──────────╯
                  &trans        &trans        &trans                            &trans                    &trans     &trans
  //            ╰─────────────┴─────────────┴────────────────────────╯       ╰──────────────────────────┴─────────────┴─────────────╯
