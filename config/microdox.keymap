@@ -23,8 +23,8 @@
 #define NUM     3
 #define FLP     4
 
- #define TAPPING_TERM 150  //  reduced from 200 on 18/02/2024
-// #define TAPPING_TERM_NON_SHIFT 225  //  added 29/06/2024 and increased from 150 to 225
+#define TAPPING_TERM 225  //   29/06/2024 increased from 150 to 225
+#define TAPPING_TERM_SHIFT 150  //   reduced from 200 to 150 on 18/02/2024  
 #define QUICK_TAP    100
 
 #define COMBO(NAME, BINDINGS, KEYPOS, LAYERS) \
@@ -147,7 +147,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_SHIFT";
             #binding-cells = <2>;
-            tapping-term-ms = <TAPPING_TERM>;
+            tapping-term-ms = <TAPPING_TERM_SHIFT>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
 //	    require-prior-idle-ms = <40>;
@@ -169,7 +169,7 @@
 //╭────────────┬─────────────┬─────────────┬─────────────┬──────────╮       ╭────────────┬─────────────┬─────────────┬─────────────┬──────────╮
     &kp APOS     &kp COMMA     &kp DOT       &kp P         &kp Y              &kp F        &kp G         &kp C         &kp R         &kp L
 //├────────────┼─────────────┼─────────────┼─────────────┼──────────┤       ├────────────┼─────────────┼─────────────┼─────────────┼──────────┤
-    &hml LGUI A   &hml LALT O   &hml LCTRL E  &hml LSHFT U  &kp I              &kp D        &hmr RSHFT H  &hmr RCTRL T  &hmr RALT N   &hmr RGUI S
+    &hml LGUI A   &hml LALT O   &hml LCTRL E  &hs LSHFT U  &kp I              &kp D        &hs RSHFT H  &hmr RCTRL T  &hmr RALT N   &hmr RGUI S
 //├────────────┼─────────────┼─────────────┼─────────────┼──────────┤       ├────────────┼─────────────┼─────────────┼─────────────┼──────────┤
    &hml LGUI SEMI  &hml LALT Q   &hml LCTRL J  &hml LSHFT K  &lt NAV X         &hmr RSHFT B  &hmr RCTRL M  &hmr RALT W   &hmr RGUI V   &kp Z
 //╰────────────┴─────────────┼─────────────┼─────────────┼──────────╯       ╰────────────┼─────────────┼─────────────┼─────────────┼──────────╯
