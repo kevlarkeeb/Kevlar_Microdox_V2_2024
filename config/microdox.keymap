@@ -23,7 +23,8 @@
 #define NUM     3
 #define FLP     4
 
-#define TAPPING_TERM 150  //  reduced from 200 on 18/02/2024
+#define TAPPING_TERM_SHIFT 150  //  reduced from 200 on 18/02/2024
+#define TAPPING_TERM_NON_SHIFT 225  //  added 29/06/2024 and increased from 150 to 225
 #define QUICK_TAP    100
 
 #define COMBO(NAME, BINDINGS, KEYPOS, LAYERS) \
@@ -109,9 +110,10 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <TAPPING_TERM>;
+            tapping-term-ms = <TAPPING_TERM_NON_SHIFT>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
+            require-prior-idle-ms = <125>;
             bindings = <&kp>, <&kp>;
         };
 
@@ -119,9 +121,10 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS_LEFT";
             #binding-cells = <2>;
-            tapping-term-ms = <TAPPING_TERM>;
+            tapping-term-ms = <TAPPING_TERM_NON_SHIFT>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
+            require-prior-idle-ms = <125>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_R THUMBS>;
             hold-trigger-on-release;             // delay positional check until key-release
@@ -131,9 +134,10 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS_RIGHT";
             #binding-cells = <2>;
-            tapping-term-ms = <TAPPING_TERM>;
+            tapping-term-ms = <TAPPING_TERM_NON_SHIFT>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
+            require-prior-idle-ms = <125>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_L THUMBS>;
             hold-trigger-on-release;             // delay positional check until key-release
@@ -143,9 +147,10 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_SHIFT";
             #binding-cells = <2>;
-            tapping-term-ms = <TAPPING_TERM>;
+            tapping-term-ms = <TAPPING_TERM_SHIFT>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
+	    require-prior-idle-ms = <40>;
             bindings = <&kp>, <&kp>;
         };
     };
@@ -164,7 +169,7 @@
 //╭────────────┬─────────────┬─────────────┬─────────────┬──────────╮       ╭────────────┬─────────────┬─────────────┬─────────────┬──────────╮
     &kp APOS     &kp COMMA     &kp DOT       &kp P         &kp Y              &kp F        &kp G         &kp C         &kp R         &kp L
 //├────────────┼─────────────┼─────────────┼─────────────┼──────────┤       ├────────────┼─────────────┼─────────────┼─────────────┼──────────┤
-    &hml LGUI A   &hml LALT O   &hml LCTRL E  &hml LSHFT U  &kp I              &kp D        &hmr RSHFT H  &hmr RCTRL T  &hmr RALT N   &hmr RGUI S
+    &hml LGUI A   &hml LALT O   &hml LCTRL E  &hs LSHFT U  &kp I              &kp D        &hs RSHFT H  &hmr RCTRL T  &hmr RALT N   &hmr RGUI S
 //├────────────┼─────────────┼─────────────┼─────────────┼──────────┤       ├────────────┼─────────────┼─────────────┼─────────────┼──────────┤
    &hml LGUI SEMI  &hml LALT Q   &hml LCTRL J  &hml LSHFT K  &lt NAV X         &hmr RSHFT B  &hmr RCTRL M  &hmr RALT W   &hmr RGUI V   &kp Z
 //╰────────────┴─────────────┼─────────────┼─────────────┼──────────╯       ╰────────────┼─────────────┼─────────────┼─────────────┼──────────╯
