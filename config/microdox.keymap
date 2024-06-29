@@ -23,8 +23,8 @@
 #define NUM     3
 #define FLP     4
 
-#define TAPPING_TERM_SHIFT 150  //  reduced from 200 on 18/02/2024
-#define TAPPING_TERM_NON_SHIFT 225  //  added 29/06/2024 and increased from 150 to 225
+ #define TAPPING_TERM 150  //  reduced from 200 on 18/02/2024
+// #define TAPPING_TERM_NON_SHIFT 225  //  added 29/06/2024 and increased from 150 to 225
 #define QUICK_TAP    100
 
 #define COMBO(NAME, BINDINGS, KEYPOS, LAYERS) \
@@ -110,7 +110,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <TAPPING_TERM_NON_SHIFT>;
+            tapping-term-ms = <TAPPING_TERM>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
   //          require-prior-idle-ms = <125>;
@@ -121,7 +121,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS_LEFT";
             #binding-cells = <2>;
-            tapping-term-ms = <TAPPING_TERM_NON_SHIFT>;
+            tapping-term-ms = <TAPPING_TERM>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
  //           require-prior-idle-ms = <125>;
@@ -134,7 +134,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS_RIGHT";
             #binding-cells = <2>;
-            tapping-term-ms = <TAPPING_TERM_NON_SHIFT>;
+            tapping-term-ms = <TAPPING_TERM>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
 //            require-prior-idle-ms = <125>;
@@ -147,7 +147,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_SHIFT";
             #binding-cells = <2>;
-            tapping-term-ms = <TAPPING_TERM_SHIFT>;
+            tapping-term-ms = <TAPPING_TERM>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
 //	    require-prior-idle-ms = <40>;
