@@ -68,6 +68,7 @@
         tap-ms = <500>;
         bindings 
                 = <&macro_press &kp LALT>
+                , <&macro_tap &none>
                 , <&macro_tap &kp F2>
                 , <&macro_release &kp LALT>
                 ;
