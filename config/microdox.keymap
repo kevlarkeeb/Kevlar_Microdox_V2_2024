@@ -64,8 +64,8 @@
 / {
     macros {
       ZMK_MACRO(OPEN_SCRIPT,
-        wait-ms = <100>;
-        tap-ms = <40>;
+        wait-ms = <150>;
+        tap-ms = <100>;
         bindings 
                 = <&macro_press &kp LALT>
                 , <&macro_tap &kp F2>
