@@ -105,9 +105,9 @@ ZMK_MACRO(BT0_CMDSPACE,
     tap-ms = <100>;
     bindings
         = <&bt BT_SEL 0>
-        , <&macro_tap &kp SPACE>
-        , <&macro_tap &kp SPACE>
-        , <&macro_tap &kp 1 &kp 1 &kp 5 &kp 5>
+        , <&macro_tap &kp F18>
+        , <&macro_tap &kp F18>
+        , <&macro_tap &kp N1 &kp N1 &kp N5 &kp N5>
         , <&macro_press &kp LGUI>
         , <&macro_tap &kp SPACE>
         , <&macro_release &kp LGUI>
