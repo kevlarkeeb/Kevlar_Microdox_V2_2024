@@ -113,8 +113,19 @@ ZMK_MACRO(BT0_CMDSPACE,
         , <&macro_release &kp LGUI>
         ;
 )
-
-
+ZMK_MACRO(BT0_CMDSPACE,
+    wait-ms = <100>;
+    tap-ms = <100>;
+    bindings
+        = <&bt BT_SEL 0>
+        , <&macro_tap &kp SPACE>
+        , <&macro_tap &kp SPACE>
+        , <&macro_tap &kp 1 &kp 1 &kp 5 &kp 5>
+        , <&macro_press &kp LGUI>
+        , <&macro_tap &kp SPACE>
+        , <&macro_release &kp LGUI>
+        ;
+)
        };
 };
 
@@ -222,7 +233,7 @@ ZMK_MACRO(BT0_CMDSPACE,
 //├────────────┼─────────────┼─────────────┼─────────────┼──────────┤       ├────────────┼─────────────┼─────────────┼─────────────┼──────────┤
     &OPEN_SCRIPT   &kp LC(P)    &kp ENTER    &SIGN_SCRIPT  &kp LA(S)          &none       &none         &none          &LOGIN        &none 
 //├────────────┼─────────────┼─────────────┼─────────────┼──────────┤       ├────────────┼─────────────┼─────────────┼─────────────┼──────────┤
-    &CLOSE_FILE    &kp LC(T)  &bt BT_SEL 0   &bt BT_SEL 1  &kp LC(S)          &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2     &none     &bt BT_CLR
+    &CLOSE_FILE    &kp LC(T)  &BT0_CMDSPACE  &bt BT_SEL 1  &kp LC(S)          &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2     &none     &bt BT_CLR
 //╰────────────┴─────────────┼─────────────┼─────────────┼──────────╯       ╰────────────┼─────────────┼─────────────┼─────────────┼──────────╯
                  &trans        &trans        &trans                            &trans                    &trans       &trans
  //            ╰─────────────┴─────────────┴────────────────────────╯       ╰──────────────────────────┴─────────────┴─────────────╯
