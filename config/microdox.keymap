@@ -113,19 +113,6 @@ ZMK_MACRO(BT0_CMDSPACE,
         , <&macro_release &kp LGUI>
         ;
 )
-ZMK_MACRO(BT0_CMDSPACE,
-    wait-ms = <100>;
-    tap-ms = <100>;
-    bindings
-        = <&bt BT_SEL 0>
-        , <&macro_tap &kp SPACE>
-        , <&macro_tap &kp SPACE>
-        , <&macro_tap &kp 1 &kp 1 &kp 5 &kp 5>
-        , <&macro_press &kp LGUI>
-        , <&macro_tap &kp SPACE>
-        , <&macro_release &kp LGUI>
-        ;
-)
        };
 };
 
